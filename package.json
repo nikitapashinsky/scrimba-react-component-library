@@ -13,9 +13,11 @@
     "chromatic": "npx chromatic --project-token=chpt_2ed31327fe5b23f"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.2.5",
     "@radix-ui/colors": "^3.0.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.6",
