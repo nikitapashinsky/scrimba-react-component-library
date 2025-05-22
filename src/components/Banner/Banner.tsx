@@ -7,7 +7,7 @@ export interface BannerProps {
 
 export default function Banner({ title, subtitle }: BannerProps) {
   return (
-    <div>
+    <div className="banner">
       <h1>{title}</h1>
       {subtitle && <h2>{subtitle}</h2>}
     </div>
