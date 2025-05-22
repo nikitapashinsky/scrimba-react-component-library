@@ -1,3 +1,5 @@
+import './banner.css';
+
 export interface BannerProps {
   title: string;
   subtitle?: string;
