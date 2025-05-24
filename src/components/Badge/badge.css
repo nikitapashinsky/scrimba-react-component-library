@@ -1,0 +1,63 @@
+.badge {
+	padding: 0.25rem 0.75rem;
+	width: min-content;
+
+	color: var(--indigo-12);
+	background-color: var(--indigo-3);
+
+	font-size: 0.875rem;
+	font-weight: 450;
+
+	&.rectangle {
+		border-radius: 4px;
+	}
+
+	&.pill {
+		border-radius: 99px;
+	}
+
+	&.gray {
+		background-color: var(--gray-4);
+		color: var(--gray-12);
+	}
+
+	&.sky {
+		background-color: var(--sky-4);
+		color: var(--sky-12);
+	}
+
+	&.green {
+		background-color: var(--green-4);
+		color: var(--green-12);
+	}
+
+	&.teal {
+		background-color: var(--teal-4);
+		color: var(--teal-12);
+	}
+
+	&.indigo {
+		background-color: var(--indigo-4);
+		color: var(--indigo-12);
+	}
+
+	&.violet {
+		background-color: var(--violet-4);
+		color: var(--violet-12);
+	}
+
+	&.pink {
+		background-color: var(--pink-4);
+		color: var(--pink-12);
+	}
+
+	&.tomato {
+		background-color: var(--tomato-4);
+		color: var(--tomato-12);
+	}
+
+	&.orange {
+		background-color: var(--orange-4);
+		color: var(--orange-12);
+	}
+}

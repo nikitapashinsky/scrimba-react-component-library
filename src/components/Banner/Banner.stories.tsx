@@ -4,68 +4,63 @@ import Banner from './Banner';
 
 const meta = {
 	component: Banner,
+	parameters: {
+		layout: 'centered',
+	},
 } satisfies Meta<typeof Banner>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const SingleLineNeutral: Story = {
+export const AllVariations: Story = {
+	args: {},
+	parameters: {
+		controls: { disable: true },
+	},
+	render: () => (
+		<div
+			style={{ display: 'grid', gap: '16px', gridTemplateColumns: '1fr 1fr' }}
+		>
+			{(['neutral', 'success', 'warning', 'error'] as const).map((type) => {
+				const text =
+					type === 'success'
+						? 'Operation completed successfully.'
+						: type === 'warning'
+							? 'This is your final warning.'
+							: type === 'error'
+								? 'Something went wrong.'
+								: 'This message displays non-critical information.';
+
+				return (
+					<>
+						<Banner
+							type={type}
+							title={`${type[0].toUpperCase() + type.slice(1)}`}
+							text={text}
+						/>
+						<Banner
+							type={type}
+							title={`${type[0].toUpperCase() + type.slice(1)}`}
+						/>
+					</>
+				);
+			})}
+		</div>
+	),
+};
+
+export const SingleLine: Story = {
 	args: {
 		title: 'Informational message',
-		status: 'neutral',
+		type: 'neutral',
 	},
 };
 
-export const SingleLineSuccess: Story = {
-	args: {
-		title: 'Success',
-		status: 'success',
-	},
-};
-
-export const SingleLineWarning: Story = {
-	args: {
-		title: 'Warning',
-		status: 'warning',
-	},
-};
-
-export const SingleLineError: Story = {
-	args: {
-		title: 'Error',
-		status: 'error',
-	},
-};
-
-export const MultiLineNeutral: Story = {
+export const MultiLine: Story = {
 	args: {
 		title: 'Information',
-		subtitle: 'This message is shown to inform user of something.',
-		status: 'neutral',
-	},
-};
-
-export const MultiLineSuccess: Story = {
-	args: {
-		title: 'Success',
-		subtitle: 'This message is shown when action was completed successfully.',
-		status: 'success',
-	},
-};
-
-export const MultiLineWarning: Story = {
-	args: {
-		title: 'Warning',
-		subtitle: 'This message is shown to warn user of something.',
-		status: 'warning',
-	},
-};
-
-export const MultiLineError: Story = {
-	args: {
-		title: 'Error',
-		subtitle: 'This message is shown when something went wrong.',
-		status: 'error',
+		text: 'This message is shown to inform user of something.',
+		type: 'neutral',
 	},
 };

@@ -8,8 +8,10 @@
 	display: flex;
 	gap: 1rem;
 	/* align-items: center; */
+	height: min-content;
 	padding: 1rem;
-	max-width: 480px;
+	padding-right: 2rem;
+	width: 540px;
 	border-radius: 0.5rem;
 	font-size: 0.875rem;
 

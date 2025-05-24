@@ -9,15 +9,15 @@ import {
 } from 'react-icons/pi';
 
 export interface BannerProps {
+	type: 'neutral' | 'success' | 'warning' | 'error';
 	title: string;
-	subtitle?: string;
-	status?: 'neutral' | 'success' | 'warning' | 'error';
+	text?: string;
 }
 
 export default function Banner({
 	title,
-	subtitle,
-	status = 'neutral',
+	text: subtitle,
+	type: status = 'neutral',
 }: BannerProps) {
 	const iconSize = 24;
 	const icon =

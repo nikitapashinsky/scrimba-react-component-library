@@ -6,3 +6,9 @@ body {
 	font-family: 'Inter Variable', sans-serif;
 	color: var(--gray-12);
 }
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: hsl(0 0% 5%);
+	}
+}
